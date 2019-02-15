@@ -31,8 +31,10 @@
   //   }
   // }
 ?>
-
+<?php include 'view/header.php'; ?>
 <!-- have to include this link to get the css to apply to this file -->
 <!-- <link rel="stylesheet" type="text/css" href="./assets/css/generic.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/landing.css"> -->
-<h1>Hi!</h1>
+<a class='font' href="signup.php">Sign Up</a>
+
+<?php include 'view/footer.php'; ?>
