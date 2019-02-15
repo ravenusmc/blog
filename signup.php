@@ -54,6 +54,24 @@
       </div>
     </div>
     <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="first_name" type="text" class="validate">
+        <label for="first_name">City</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">State</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">zip</label>
+      </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
@@ -63,8 +81,8 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
+        <input id="password" type="password" class="validate">
+        <label for="password">Confirm Password</label>
       </div>
     </div>
   </form>
