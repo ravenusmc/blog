@@ -1,8 +1,8 @@
 <?php
   // Start the session
-  //session_start();
+  session_start();
   //Pulling in the databases
-  // require('./model/database.php');
+  require('./model/database.php');
   // require('./model/helpers.php');
   // global $db;
   // $message = "";
