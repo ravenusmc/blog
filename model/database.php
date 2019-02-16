@@ -5,7 +5,7 @@
 
     try {
         $db = new PDO($dsn, $username, $password);
-        echo 'connected';
+        //echo 'connected';
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo 'failed';

@@ -57,8 +57,6 @@
       $statement->bindValue(':password', $password_hashed);
       $statement->execute();
       $statement->closeCursor();
-      //To see any error messages
-
 
       //Message to alert user that they signed up
       $message = '<label>User Signed Up!</label>';
@@ -131,6 +129,7 @@
       </div>
     </div>
     <button type="submit" name="login" class="btn btn-primary form-submit-btn">Sign Up</button>
+    <a class="waves-effect waves-light btn" href="index.php">Login</a>
   </form>
 </div>
 
