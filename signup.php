@@ -7,7 +7,9 @@
   //Pulling in the databases
   require('./model/database.php');
   global $db;
+
   $message = "";
+
   if (isset($_POST["login"])){
     $firstname = filter_input(INPUT_POST, 'firstname');
     $lastname = filter_input(INPUT_POST, 'lastname');
@@ -22,16 +24,54 @@
     //Hashing the password
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
+    //This SQL query checks to see if the username is in the users table.
+    $query = "SELECT * FROM users WHERE
+              username = :username";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username', $username);
+    $count = $statement->rowCount();
 
+    //Conditional statements based on what the query returns.
+    if ($count > 0){
+      $message = '<label class="errorMsg">Username Taken!</label>';
+    }else if ($password != $password2) {
+      $message = '<label class="errorMsg">Passwords Do Not Match!</label>';
+    }else {
+      //Error messages for DB connection issues
+      // ini_set('display_errors', 1);
+      // ini_set('display_startup_errors', 1);
+      // error_reporting(E_ALL);
+      //Query to add new user to the users table
+      $query = "INSERT INTO users
+                  (firstname, lastname, username, email, city, state, zip, password)
+                VALUES
+                  (:firstname, :lastname, :username, :email, :city, :state, :zip, :password)";
+      $statement = $db->prepare($query);
+      $statement->bindValue(':firstname', $firstname);
+      $statement->bindValue(':lastname', $lastname);
+      $statement->bindValue(':username', $username);
+      $statement->bindValue(':email', $email);
+      $statement->bindValue(':city', $city);
+      $statement->bindValue(':state', $state);
+      $statement->bindValue(':zip', $zip);
+      $statement->bindValue(':password', $password_hashed);
+      $statement->execute();
+      $statement->closeCursor();
+      //To see any error messages
+
+
+      //Message to alert user that they signed up
+      $message = '<label>User Signed Up!</label>';
+    }
   }
 ?>
 <?php include 'view/header.php'; ?>
-
 <!-- have to include this link to get the css to apply to this file -->
 <!-- <link rel="stylesheet" type="text/css" href="./assets/css/generic.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/signup.css"> -->
 
 <div class="row">
+
   <!-- Start of error handling -->
   <?php
     if (isset($message)){
@@ -39,11 +79,12 @@
     }
   ?>
   <!-- End of error handling -->
+
   <form method="post" class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        <!-- <input name='firstname' id="first_name" type="text" class="validate"> -->
-        <input type="text" name='firstname' class="validate" id="firstname">
+        <input name='firstname' id="first_name" type="text" class="validate">
+        <!-- <input type="text" name='firstname' class="validate" id="firstname"> -->
         <label for="first_name">First Name</label>
       </div>
       <div class="input-field col s6">
@@ -53,8 +94,8 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input name='username' id="email" type="email" class="validate">
-        <label for="email">Username</label>
+        <input name='username' id="username" type="text" class="validate">
+        <label for="username">Username</label>
       </div>
     </div>
     <div class="row">
