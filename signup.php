@@ -41,6 +41,7 @@
 <!-- have to include this link to get the css to apply to this file -->
 <!-- <link rel="stylesheet" type="text/css" href="./assets/css/generic.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/signup.css"> -->
+
 <div class="row">
   <form class="col s12">
     <div class="row">
@@ -51,6 +52,12 @@
       <div class="input-field col s6">
         <input id="last_name" type="text" class="validate">
         <label for="last_name">Last Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email">Username</label>
       </div>
     </div>
     <div class="row">
@@ -70,7 +77,7 @@
       </div>
       <div class="input-field col s6">
         <input id="last_name" type="text" class="validate">
-        <label for="last_name">zip</label>
+        <label for="last_name">Zip</label>
       </div>
     </div>
     <div class="row">
@@ -85,5 +92,8 @@
         <label for="password">Confirm Password</label>
       </div>
     </div>
+    <a class="waves-effect waves-light btn">Submit</a>
   </form>
 </div>
+
+<?php include 'view/footer.php'; ?>
