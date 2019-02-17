@@ -15,21 +15,22 @@
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-<nav>
-  <div class="nav-wrapper blue">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href=""../logout.php"">Log Out</a></li>
-    </ul>
-  </div>
-</nav>
-<main class="orange darken-4">
-</main>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper blue">
+      <a href="#" class="brand-logo center">BLOG!</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="../logout.php">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
