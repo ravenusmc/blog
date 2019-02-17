@@ -23,6 +23,7 @@
     $valid_password = password_verify($password, $user_table_password);
     if ($valid_password) {
       $user = get_one_user($username, $user_table_password);
+      echo $username;
       $_SESSION["username"] = $username;
       $_SESSION["user_id"] = $user['user_id'];
       header("location: controller/index.php");
@@ -33,11 +34,9 @@
   }
 ?>
 <?php include 'view/header.php'; ?>
-<!-- have to include this link to get the css to apply to this file -->
-<!-- <link rel="stylesheet" type="text/css" href="./assets/css/generic.css">
-<link rel="stylesheet" type="text/css" href="./assets/css/landing.css"> -->
+<link rel="stylesheet" type="text/css" href="./assets/css/landing.css">
 
-<div class="container">
+<div class="container height_fix ">
   <div class="row">
     <!-- Start of error handling -->
     <?php

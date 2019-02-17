@@ -26,7 +26,9 @@
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
-        <li><a href="../logout.php">Log Out</a></li>
+        <?php if ($navbar == True) : ?>
+          <li><a href="../logout.php">Log Out</a></li>
+        <?php endif; ?>
       </ul>
     </div>
   </nav>
