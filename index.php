@@ -36,8 +36,8 @@
 <?php include 'view/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="./assets/css/landing.css">
 
-<div class="container height_fix ">
-  <div class="row">
+<div class="container height_fix">
+  <div class="row margin_fix">
     <!-- Start of error handling -->
     <?php
       if (isset($message)){
@@ -45,6 +45,8 @@
       }
     ?>
     <!-- End of error handling -->
+
+    <!-- Start of login form -->
     <form method="post" class="col s12">
       <div class="row">
         <div class="input-field col s12">
@@ -61,6 +63,7 @@
       <button type="submit" name="login" class="btn btn-primary form-submit-btn">Login</button>
       <a class="waves-effect waves-light btn" href="signup.php">Sign Up</a>
     </form>
+    <!-- End of login form -->
 
   </div>
 </div>
