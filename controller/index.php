@@ -22,9 +22,9 @@
   if ($allowed){
     switch ($action) {
       //This case will bring the user to the page that shows all of the prisoners
-       case 'home':
-         include('home.php');
-         break;
+      case 'home':
+        include('home.php');
+        break;
     }
   }else {
     include('notAllowed.php');

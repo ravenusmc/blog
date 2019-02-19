@@ -1,0 +1,8 @@
+main {
+  background-image: url('../images/mountain.jpg');
+  height: 600px;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

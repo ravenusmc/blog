@@ -7,9 +7,12 @@
 ?>
 <!-- Bringing in CSS -->
 <link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/home.css">
 
 <?php include '../view/header.php'; ?>
 
-<h1>HOME</h1>
+<main>
+</main>
+
 
 <?php include '../view/footer.php'; ?>
