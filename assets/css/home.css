@@ -1,6 +1,6 @@
 /* The CSS in this file will cover the CSS for the home page */
 
-main {
+.section_one {
   display: flex !important;
   flex-direction: row;
   justify-content: center;
@@ -11,4 +11,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.section_two {
+  height: 500px;
 }
