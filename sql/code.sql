@@ -10,3 +10,13 @@ CREATE TABLE users (
     username VARCHAR(30) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE topics (
+  topic_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  topic VARCHAR(30) NOT NULL,
+);
+
+INSERT INTO topics
+(topic)
+                VALUES
+('politics');
