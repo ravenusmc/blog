@@ -24,7 +24,9 @@
     switch ($action) {
       //This case will bring the user to the page that shows all of the prisoners
       case 'home':
-
+        $topics = get_all_Topics();
+        var_dump($topics);
+        echo $topics[1];
         include('home.php');
         break;
     }
