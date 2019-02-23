@@ -59,12 +59,14 @@
     <h4 class='center'>Make your Own:</h4>
 
     <form>
-      <input id='topic' placeholder='Topic'>
-      <br>
-      <br>
-      <div>
-        <input onclick='submitTopic(); return false;' class='button' type="submit" value="Create Topic" />
+      <div class="input-field col s12">
+        <input  name='topic' id="topic" type="text" class="validate">
+        <label for="topic">Topic</label>
+        <input onclick='createTopic(); return false;' class='button' type="submit" value="Add Topic" />
       </div>
+      <!-- <div>
+        <input onclick='submitTopic(); return false;' class='button' type="submit" value="Create Topic" />
+      </div> -->
     </form>
 
 
@@ -76,5 +78,5 @@
 </main>
 <!-- End of Main Section -->
 
-
+<script type="text/javascript" src='../assets/js/support.js'></script>
 <?php include '../view/footer.php'; ?>
