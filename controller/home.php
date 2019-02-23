@@ -43,16 +43,28 @@
 
   <section class='section_two'>
 
-    <h2>Select A Topic</h2>
+    <h4 class='center'>Select A Topic:</h4>
 
-    <form action="index.php" method="post" class="col s4">
+    <form action="index.php" method="post" class="topic_selection_form">
       <input type="hidden" name="action" value="see_topic" />
-      <select name="name" class="browser-default">
+      <select name="topics" class="browser-default">
         <?php foreach ($topics as $topic) : ?>
           <option value='<?php echo $topic['topic_id'] ?>'><?php echo $topic['topic']; ?></option>
         <?php endforeach; ?>
       </select>
+      <br>
       <input type="submit" value="See Discussion" />
+    </form>
+
+    <h4 class='center'>Make your Own:</h4>
+
+    <form>
+      <input id='topic' placeholder='Topic'>
+      <br>
+      <br>
+      <div>
+        <input onclick='submitTopic(); return false;' class='button' type="submit" value="Create Topic" />
+      </div>
     </form>
 
 

@@ -12,6 +12,18 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .section_two {
   height: 500px;
+}
+
+.topic_selection_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  width: 20% !important;
 }

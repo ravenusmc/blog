@@ -27,8 +27,9 @@
         $topics = get_all_Topics();
         include('home.php');
         break;
-      //This case will bring the user to the page to see all of the topics 
+      //This case will bring the user to the page to see all of the topics
       case 'see_topic':
+        $topic_id = filter_input(INPUT_POST, 'topics');
         include('see_topic.php');
         break;
     }
