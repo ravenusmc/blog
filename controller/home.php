@@ -43,25 +43,23 @@
 
   <section class='section_two'>
 
-    <p>test area</p>
-    <?php foreach ($topics as $topic) : ?>
-      <p><?php echo $topic['topic']; ?></p>
-    <?php endforeach; ?>
+    <h2>Select A Topic</h2>
 
-    <form action="index.php" method="post">
-      <label>Please Select a Topic:</label>
-      
-      <select name="topics">
+    <form action="index.php" method="post" class="col s4">
+      <input type="hidden" name="action" value="see_topic" />
+      <select name="name" class="browser-default">
         <?php foreach ($topics as $topic) : ?>
-        <option value='<?php echo $topic['topic_id'] ?>'>
-          <?php echo $topic['topic']; ?></option>
+          <option value='<?php echo $topic['topic_id'] ?>'><?php echo $topic['topic']; ?></option>
         <?php endforeach; ?>
-      </select><br>
-
-      <input type="submit" value="topic" />
+      </select>
+      <input type="submit" value="See Discussion" />
     </form>
 
+
   </section>
+
+
+
 
 </main>
 <!-- End of Main Section -->

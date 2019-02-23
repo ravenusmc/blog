@@ -22,12 +22,14 @@
 
   if ($allowed){
     switch ($action) {
-      //This case will bring the user to the page that shows all of the prisoners
+      //This case will bring the user to the home page
       case 'home':
         $topics = get_all_Topics();
-        var_dump($topics);
-        echo $topics[1];
         include('home.php');
+        break;
+      //This case will bring the user to the page to see all of the topics 
+      case 'see_topic':
+        include('see_topic.php');
         break;
     }
   }else {
