@@ -14,6 +14,19 @@
     return $topics;
   }
 
+  //This function adds add a new topic to the topics table
+  function add_topic($topic) {
+    global $db;
+    $query = 'INSERT INTO topics
+                  (topic)
+                VALUES
+                  (:topic)';
+      $statement = $db->prepare($query);
+      $statement->bindValue(':topic', $topic);
+      $statement->execute();
+      $statement->closeCursor();
+  }
+
 
 
 ?>

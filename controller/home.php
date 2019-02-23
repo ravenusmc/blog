@@ -64,10 +64,12 @@
         <label for="topic">Topic</label>
         <input onclick='createTopic(); return false;' class='button' type="submit" value="Add Topic" />
       </div>
-      <!-- <div>
-        <input onclick='submitTopic(); return false;' class='button' type="submit" value="Create Topic" />
-      </div> -->
     </form>
+
+    <div id="message">
+      <b></b>
+      <div>
+    </div>
 
 
   </section>
