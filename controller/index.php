@@ -30,6 +30,8 @@
       //This case will bring the user to the page to see all of the topics
       case 'see_topic':
         $topic_id = filter_input(INPUT_POST, 'topics');
+        //Fetch all comments about the topic using topic ID
+        
         include('see_topic.php');
         break;
     }

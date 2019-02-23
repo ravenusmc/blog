@@ -16,7 +16,19 @@ CREATE TABLE topics (
   topic VARCHAR(30) NOT NULL,
 );
 
+CREATE TABLE comments (
+  comment_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  comment VARCHAR(255) NOT NULL,
+  topic_id INT NOT NULL,
+  user_id INT NOT NULL,
+  votes INT NOT NULL DEFAULT 0,
+  FOREIGN KEY (topic_id) REFERENCES topics(topic_id)
+  ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+  ON DELETE CASCADE,
+);
+
 INSERT INTO topics
 (topic)
-                VALUES
+VALUES
 ('politics');

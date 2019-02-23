@@ -1,6 +1,7 @@
 <?php
   session_start();
   $name = $_SESSION["username"];
+  $id = $_SESSION["user_id"];
   if (!empty($name)){
     $navbar = True;
   }
@@ -58,10 +59,10 @@
 
     <h4 class='center'>Make your Own:</h4>
 
-    <form>
-      <div class="input-field col s12">
+    <form class="topic_selection_form">
+      <div class="input-field col s6 form_fix">
         <input  name='topic' id="topic" type="text" class="validate">
-        <label for="topic">Topic</label>
+        <label for="topic">Add Topic</label>
         <input onclick='createTopic(); return false;' class='button' type="submit" value="Add Topic" />
       </div>
     </form>

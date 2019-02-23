@@ -14,7 +14,7 @@
 }
 
 .section_two {
-  height: 500px;
+  height: 375px;
 }
 
 .topic_selection_form {
@@ -25,5 +25,9 @@
 }
 
 select {
+  width: 20% !important;
+}
+
+.form_fix {
   width: 20% !important;
 }
