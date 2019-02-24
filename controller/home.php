@@ -57,7 +57,7 @@
       <input type="submit" value="See Discussion" />
     </form>
 
-    <h4 class='center'>Make your Own:</h4>
+    <h4 class='center'>Or...Make your Own:</h4>
 
     <form class="topic_selection_form">
       <div class="input-field col s6 form_fix">
@@ -71,7 +71,6 @@
       <b></b>
       <div>
     </div>
-
 
   </section>
 

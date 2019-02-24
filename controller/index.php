@@ -10,6 +10,7 @@
   require('../model/database.php');
   require('../model/helpers.php');
   require('../model/topics.php');
+  require('../model/comments.php');
 
   //Setting a default action
   $action = filter_input(INPUT_POST, 'action');
@@ -31,7 +32,7 @@
       case 'see_topic':
         $topic_id = filter_input(INPUT_POST, 'topics');
         //Fetch all comments about the topic using topic ID
-        
+        $commments = get_all_comments_by_topic($topic_id);
         include('see_topic.php');
         break;
     }
