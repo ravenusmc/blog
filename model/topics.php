@@ -27,6 +27,18 @@
       $statement->closeCursor();
   }
 
+  //This function will get the topic name based on the id
+  function get_topic_name($topic_id){
+    global $db;
+    $query = 'SELECT * FROM topics
+              WHERE topic_id = :topic_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':topic_id', $topic_id);
+    $statement->execute();
+    $topic = $statement->fetch();
+    $statement->closeCursor();
+    return $topic;
+  }
 
 
 ?>

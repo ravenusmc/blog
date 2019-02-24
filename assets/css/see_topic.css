@@ -1,0 +1,21 @@
+/* This file will contain all of the css for the see_topics.php file */
+
+/* CSS for the header */
+.see_topic_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/talking.jpg');
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header div {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 25px;
+  background-color: rgba(255, 0, 0, 0.5);
+}

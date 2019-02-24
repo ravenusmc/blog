@@ -31,6 +31,8 @@
       //This case will bring the user to the page to see all of the topics
       case 'see_topic':
         $topic_id = filter_input(INPUT_POST, 'topics');
+        //Getting topic name
+        $topic = get_topic_name($topic_id);
         //Fetch all comments about the topic using topic ID
         $commments = get_all_comments_by_topic($topic_id);
         include('see_topic.php');
