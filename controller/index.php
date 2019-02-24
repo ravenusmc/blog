@@ -2,6 +2,7 @@
 
   session_start();
   $name = $_SESSION["username"];
+  $id = $_SESSION["user_id"];
   if (!empty($name)){
     $allowed = True;
   }
@@ -34,6 +35,16 @@
         //Getting topic name
         $topic = get_topic_name($topic_id);
         //Fetch all comments about the topic using topic ID
+        $commments = get_all_comments_by_topic($topic_id);
+        include('see_topic.php');
+        break;
+      //This case will add a comment
+      case 'add_comment':
+        $comment = filter_input(INPUT_POST, 'comment');
+        $topic_id = filter_input(INPUT_POST, 'topic_id');
+        $user_id = $id;
+        $votes = 0;
+        $topic = get_topic_name($topic_id);
         $commments = get_all_comments_by_topic($topic_id);
         include('see_topic.php');
         break;

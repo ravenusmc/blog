@@ -22,6 +22,44 @@
   </div>
 </header>
 
+<main>
+
+  <section id='section_one'>
+
+    <form action="index.php" method="post" class="topic_selection_form">
+
+      <input type="hidden" name="action" value="add_comment" />
+
+      <input type="hidden" name="topic_id" value="<?php echo $topic['topic_id']; ?>" />
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input name='comment' id="comment" type="text" class="validate" />
+          <label for="comment">Comment</label>
+        </div>
+      </div>
+      <button type="submit" name="add_comment" class="btn btn-primary form-submit-btn">Add Comment</button>
+      <br>
+
+    </form>
+
+    <!-- <form class="topic_selection_form">
+      <div class="input-field col s6 form_fix">
+        <input  name='comment' id="comment" type="text" class="validate">
+        <label for="comment">Add Comment</label>
+        <input onclick='addComment(); return false;' class='button' type="submit" value="Add Comment" />
+      </div>
+    </form>
+
+    <div id="message">
+      <b></b>
+      <div>
+    </div> -->
+
+  <section>
+
+</main>
+
 
 
 

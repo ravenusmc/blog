@@ -7,7 +7,8 @@
   justify-content: center;
   align-items: center;
   background-image: url('../images/talking.jpg');
-  height: 550px;
+  height: 600px;
+  width: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,4 +19,17 @@ header div {
   border-radius: 12px;
   padding: 25px;
   background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* CSS for the main area */
+.topic_selection_form {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_fix {
+  width: 20% !important;
 }
