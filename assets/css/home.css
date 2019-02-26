@@ -13,6 +13,19 @@
   background-size: cover;
 }
 
+.section_one_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3em;
+}
+
+.section_one_div div {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .section_two {
   height: 375px;
 }
@@ -31,3 +44,5 @@ select {
 .form_fix {
   width: 20% !important;
 }
+
+/* Media Queries */

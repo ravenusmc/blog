@@ -16,27 +16,21 @@
 <main>
 
   <section class='section_one'>
-    <div class="row">
+    <div class='section_one_div'>
 
-      <div class="col s3">
-        <div class="card-panel orange lighten-2">
-          <span class="white-text">Share you ideas with others...
-          </span>
-        </div>
+      <div class='center'>
+        <span class="white-text">Share you ideas with others...
+        </span>
       </div>
 
-      <div class="col s3">
-        <div class="card-panel orange lighten-2">
-          <span class="white-text">Argue with others...
-          </span>
-        </div>
+      <div class='center'>
+        <span class="white-text">Argue with others...
+        </span>
       </div>
 
-      <div class="col s3">
-        <div class="card-panel orange lighten-2">
-          <span class="white-text">Be inspired by new ideas...
-          </span>
-        </div>
+      <div class='center'>
+        <span class="white-text">Be inspired by new ideas...
+        </span>
       </div>
 
     </div>
