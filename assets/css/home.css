@@ -46,3 +46,18 @@ select {
 }
 
 /* Media Queries */
+@media only all and (max-width: 768px) {
+
+  .section_one_div {
+    grid-template-columns: 1fr;
+  }
+
+  select {
+    width: 50% !important;
+  }
+
+  .form_fix {
+    width: 50% !important;
+  }
+
+}
