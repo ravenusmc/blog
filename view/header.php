@@ -20,19 +20,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-<div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper blue">
-      <a href="#" class="brand-logo center">BLOG!</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="badges.html">Home</a></li>
-        <?php if ($navbar == True) : ?>
-          <li><a href="../logout.php">Log Out</a></li>
-        <?php endif; ?>
-      </ul>
-    </div>
-  </nav>
-</div>
+  <div class="navbar-fixed">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">BLOG!</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <?php if ($navbar == True) : ?>
+              <a class="nav-link" href="../logout.php">Log Out</a>
+            <?php endif; ?>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
 
 
 </body>
