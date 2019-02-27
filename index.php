@@ -38,16 +38,15 @@
 
 <div class="container height_fix">
   <div class="row margin_fix">
-    <!-- Start of error handling -->
-    <?php
-      if (isset($message)){
-        echo $message;
-      }
-    ?>
-    <!-- End of error handling -->
-
     <!-- Start of login form -->
     <form method="post" class="col s12">
+      <!-- Start of error handling -->
+      <?php
+        if (isset($message)){
+          echo $message;
+        }
+      ?>
+      <!-- End of error handling -->
       <div class="row">
         <div class="input-field col s12">
           <input name='username' id="username" type="text" class="validate">

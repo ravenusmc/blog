@@ -43,19 +43,6 @@
 
     </form>
 
-    <!-- <form class="topic_selection_form">
-      <div class="input-field col s6 form_fix">
-        <input  name='comment' id="comment" type="text" class="validate">
-        <label for="comment">Add Comment</label>
-        <input onclick='addComment(); return false;' class='button' type="submit" value="Add Comment" />
-      </div>
-    </form>
-
-    <div id="message">
-      <b></b>
-      <div>
-    </div> -->
-
   <section>
 
 </main>
