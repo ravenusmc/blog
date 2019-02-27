@@ -48,6 +48,10 @@
         $commments = get_all_comments_by_topic($topic_id);
         include('see_topic.php');
         break;
+      //This case will take the user to the page to see comments
+      case 'see_comment':
+        include('see_comment.php');
+        break;
     }
   }else {
     include('notAllowed.php');

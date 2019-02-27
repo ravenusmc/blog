@@ -34,7 +34,8 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input name='comment' id="comment" type="text" class="validate" />
+          <textarea name='comment' id="comment" class="materialize-textarea"></textarea>
+          <!-- <input name='comment' id="comment" type="text" class="validate" /> -->
           <label for="comment">Comment</label>
         </div>
       </div>
