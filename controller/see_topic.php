@@ -22,10 +22,11 @@
   </div>
 </header>
 
+<!-- start of main section -->
 <main>
 
   <section id='section_one'>
-
+    <!-- Start of form -->
     <form action="index.php" method="post" class="topic_selection_form">
 
       <input type="hidden" name="action" value="add_comment" />
@@ -43,10 +44,12 @@
       <br>
 
     </form>
+    <!-- End of form --> 
 
   <section>
 
 </main>
+<!-- End of main section -->
 
 
 
