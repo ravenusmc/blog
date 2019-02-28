@@ -15,12 +15,13 @@
 <!-- including header file -->
  <?php include '../view/header.php'; ?>
 
-
+<!-- Start of header -->
 <header class='see_topic_header'>
   <div>
     <h5 class='center'>Comments about <?php echo $topic['topic']; ?></h5>
   </div>
 </header>
+<!-- End of Header -->
 
 <!-- start of main section -->
 <main>
@@ -44,7 +45,7 @@
       <br>
 
     </form>
-    <!-- End of form --> 
+    <!-- End of form -->
 
   <section>
 
