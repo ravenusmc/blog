@@ -2,7 +2,7 @@
 
   //This file will contain all of the code to get information out of the
   //comments table.
-  
+
   //This function will get all comments by topic.
   function get_all_comments_by_topic($topic_id) {
     global $db;
@@ -16,7 +16,7 @@
     return $comments;
   }
 
-  function add_comments(){
+  function add_comments($comment, $topic_id, $user_id, $votes){
       global $db;
       $query = 'INSERT INTO comments
                     (comment, topic_id, user_id, votes)

@@ -46,8 +46,13 @@
 
     </form>
     <!-- End of form -->
+  </section>
 
-  <section>
+  <section id='section_two'>
+      <?php foreach ($commments as $commment) : ?>
+        <p><?php echo $commment['comment'] ?></p>
+      <?php endforeach; ?>
+  </section>
 
 </main>
 <!-- End of main section -->

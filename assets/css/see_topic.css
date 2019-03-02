@@ -22,6 +22,13 @@ header div {
 }
 
 /* CSS for the main area */
+main {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  border: 2px solid blue;
+}
+
 .topic_selection_form {
   margin: 100px;
   display: flex;
@@ -32,4 +39,8 @@ header div {
 
 .form_fix {
   width: 20% !important;
+}
+
+#section_one {
+  border: 2px solid black;
 }
