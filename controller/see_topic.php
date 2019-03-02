@@ -65,10 +65,15 @@
               <input type="hidden" name="topic_id" value="<?php echo $topic['topic_id']; ?>" />
               <input type="hidden" name="comment_id" value="<?php echo $commment['comment_id'] ?>" />
               <button type="submit" name="change_vote" class="btn btn-primary form-submit-btn">Up Vote</button>
-              <!-- <a href="#">Up Vote</a> -->
             </form>
 
-            <a href="#">Down Vote</a>
+            <form action="index.php" method="post">
+              <input type="hidden" name="action" value="change_vote" />
+              <input type="hidden" name="down" value="down" />
+              <input type="hidden" name="topic_id" value="<?php echo $topic['topic_id']; ?>" />
+              <input type="hidden" name="comment_id" value="<?php echo $commment['comment_id'] ?>" />
+              <button type="submit" name="change_vote" class="btn btn-primary form-submit-btn">Down Vote</button>
+            </form>
 
             <?php if ($id == $commment['user_id'] ) : ?>
             <form action="index.php" method="post">
@@ -78,7 +83,7 @@
               <button type="submit" name="delete_comment" class="btn btn-primary form-submit-btn">Delete Comment</button>
             </form>
             <?php endif; ?>
-            
+
           </div>
         </div>
       </div>
