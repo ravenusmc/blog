@@ -59,6 +59,16 @@
         include('see_topic.php');
         break;
       case 'change_vote':
+        $topic_id = filter_input(INPUT_POST, 'topic_id');
+        $comment_id = filter_input(INPUT_POST, 'comment_id');
+        $vote_type = filter_input(INPUT_POST, 'up');
+        if ($vote_type == 'up'){
+          $comment = get_one_comment($comment_id);
+          $new_vote = $comment['votes'] + 1;
+          change_vote($new_vote, $comment_id);
+        }else if ($vote_type == 'down'){
+
+        }
         $topic = get_topic_name($topic_id);
         $commments = get_all_comments_by_topic($topic_id);
         include('see_topic.php');
