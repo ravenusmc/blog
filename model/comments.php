@@ -6,7 +6,9 @@
   //This function will get all comments by topic.
   function get_all_comments_by_topic($topic_id) {
     global $db;
-    $query = 'SELECT * FROM comments
+    $query = 'SELECT *
+              FROM comments c
+              JOIN users u on u.user_id = c.user_id
               WHERE topic_id = :topic_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':topic_id', $topic_id);
