@@ -44,9 +44,10 @@
         $topic_id = filter_input(INPUT_POST, 'topic_id');
         $user_id = $id;
         $votes = 0;
-        $topic = get_topic_name($topic_id);
-        $commments = get_all_comments_by_topic($topic_id);
-        include('see_topic.php');
+        add_comments($comment, $topic_id, $user_id, $votes);
+        // $topic = get_topic_name($topic_id);
+        // $commments = get_all_comments_by_topic($topic_id);
+        include('see_comment.php');
         break;
       //This case will take the user to the page to see comments
       case 'see_comment':
