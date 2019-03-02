@@ -37,7 +37,6 @@
       <div class="row">
         <div class="input-field col s12">
           <textarea name='comment' id="comment" class="materialize-textarea"></textarea>
-          <!-- <input name='comment' id="comment" type="text" class="validate" /> -->
           <label for="comment">Comment</label>
         </div>
       </div>
@@ -49,7 +48,6 @@
   </section>
 
   <section id='section_two'>
-    <iframe>
     <?php foreach ($commments as $commment) : ?>
     <div class="row">
       <div class="col s12 m6">
@@ -62,12 +60,19 @@
           <div class="card-action">
             <a href="#">Up Vote</a>
             <a href="#">Down Vote</a>
+            <?php if ($id == $commment['user_id'] ) : ?>
+            <form action="index.php" method="post">
+              <input type="hidden" name="action" value="delete_comment" />
+              <input type="hidden" name="comment_id" value="<?php echo $commment['comment_id'] ?>" />
+              <input type="hidden" name="topic_id" value="<?php echo $topic['topic_id']; ?>" />
+              <button type="submit" name="delete_comment" class="btn btn-primary form-submit-btn">Delete Comment</button>
+            </form>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
     <?php endforeach; ?>
-    </iframe>
 
   </section>
 

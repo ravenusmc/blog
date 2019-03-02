@@ -18,6 +18,7 @@
     return $comments;
   }
 
+  //This function will add a comment to the comments table. 
   function add_comments($comment, $topic_id, $user_id, $votes){
       global $db;
       $query = 'INSERT INTO comments
@@ -31,6 +32,17 @@
       $statement->bindValue(':votes', $votes);
       $statement->execute();
       $statement->closeCursor();
+  }
+
+  //This function will delete a comment from the comments table
+  function delete_comment($comment_id){
+    global $db;
+    $query = 'DELETE FROM comments
+          WHERE comment_id = :comment_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':comment_id', $comment_id);
+    $statement->execute();
+    $statement->closeCursor();
   }
 
 ?>

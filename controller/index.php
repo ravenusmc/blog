@@ -45,13 +45,23 @@
         $user_id = $id;
         $votes = 0;
         add_comments($comment, $topic_id, $user_id, $votes);
-        // $topic = get_topic_name($topic_id);
-        // $commments = get_all_comments_by_topic($topic_id);
-        include('see_comment.php');
+        $topic = get_topic_name($topic_id);
+        $commments = get_all_comments_by_topic($topic_id);
+        include('see_topic.php');
         break;
-      //This case will take the user to the page to see comments
-      case 'see_comment':
-        include('see_comment.php');
+      //This case will delete a comment
+      case 'delete_comment':
+        $topic_id = filter_input(INPUT_POST, 'topic_id');
+        $comment_id = filter_input(INPUT_POST, 'comment_id');
+        delete_comment($comment_id);
+        $topic = get_topic_name($topic_id);
+        $commments = get_all_comments_by_topic($topic_id);
+        include('see_topic.php');
+        break;
+      case 'change_vote':
+        $topic = get_topic_name($topic_id);
+        $commments = get_all_comments_by_topic($topic_id);
+        include('see_topic.php');
         break;
     }
   }else {
