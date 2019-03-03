@@ -64,7 +64,7 @@
               <input type="hidden" name="up" value="up" />
               <input type="hidden" name="topic_id" value="<?php echo $topic['topic_id']; ?>" />
               <input type="hidden" name="comment_id" value="<?php echo $commment['comment_id'] ?>" />
-              <button type="submit" name="change_vote" class="btn btn-primary form-submit-btn">Up Vote</button>
+              <button type="submit" name="change_vote" class="btn btn-primary form-submit-btn"><i class="far fa-thumbs-up"></i></button>
             </form>
 
             <form action="index.php" method="post">
@@ -72,7 +72,7 @@
               <input type="hidden" name="down" value="down" />
               <input type="hidden" name="topic_id" value="<?php echo $topic['topic_id']; ?>" />
               <input type="hidden" name="comment_id" value="<?php echo $commment['comment_id'] ?>" />
-              <button type="submit" name="change_vote" class="btn btn-primary form-submit-btn">Down Vote</button>
+              <button type="submit" name="change_vote" class="btn btn-primary form-submit-btn"><i class="far fa-thumbs-down"></i></button>
             </form>
 
             <?php if ($id == $commment['user_id'] ) : ?>
