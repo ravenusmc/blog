@@ -65,67 +65,64 @@
 ?>
 <?php include 'view/header.php'; ?>
 <!-- have to include this link to get the css to apply to this file -->
-<!-- <link rel="stylesheet" type="text/css" href="./assets/css/generic.css">
-<link rel="stylesheet" type="text/css" href="./assets/css/signup.css"> -->
+<link rel="stylesheet" type="text/css" href="./assets/css/signup.css">
 
 <div class="container">
   <div class="row">
 
-    <!-- Start of error handling -->
-    <?php
-      if (isset($message)){
-        echo $message;
-      }
-    ?>
-    <!-- End of error handling -->
-
-    <form method="post" class="col s12">
+    <form method="post" class="col s12 form_fix">
+      <!-- Start of error handling -->
+      <?php
+        if (isset($message)){
+          echo $message;
+        }
+      ?>
+      <!-- End of error handling -->
       <div class="row">
         <div class="input-field col s6">
-          <input name='firstname' id="first_name" type="text" class="validate">
-          <!-- <input type="text" name='firstname' class="validate" id="firstname"> -->
+          <input name='firstname' id="first_name" type="text" class="validate" required>
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
-          <input name='lastname' id="last_name" type="text" class="validate">
+          <input name='lastname' id="last_name" type="text" class="validate" required>
           <label for="last_name">Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input name='username' id="username" type="text" class="validate">
+          <input name='username' id="username" type="text" class="validate" required>
           <label for="username">Username</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input name='email' id="email" type="email" class="validate">
+          <input name='email' id="email" type="email" class="validate" required>
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input name='city' id="first_name" type="text" class="validate">
+          <input name='city' id="first_name" type="text" class="validate" required>
           <label for="first_name">City</label>
         </div>
         <div class="input-field col s6">
-          <input name='state' id="last_name" type="text" class="validate">
+          <input name='state' id="last_name" type="text" class="validate" required>
           <label for="last_name">State</label>
         </div>
         <div class="input-field col s6">
-          <input name='zip' id="last_name" type="text" class="validate">
+          <input name='zip' id="last_name" type="text" class="validate" required>
           <label for="last_name">Zip</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input name='password' id="password" type="password" class="validate">
+          <input name='password' id="password" type="password" class="validate" required>
           <label for="password">Password</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input name='password2' id="password2" type="password" class="validate">
+          <input name='password2' id="password2" type="password" class="validate" required>
           <label for="password2">Confirm Password</label>
         </div>
       </div>

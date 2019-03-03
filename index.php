@@ -23,7 +23,6 @@
     $valid_password = password_verify($password, $user_table_password);
     if ($valid_password) {
       $user = get_one_user($username, $user_table_password);
-      echo $username;
       $_SESSION["username"] = $username;
       $_SESSION["user_id"] = $user['user_id'];
       header("location: controller/index.php");

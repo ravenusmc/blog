@@ -57,7 +57,7 @@
             <span class="card-title"><?php echo $commment['comment'] ?></span>
             <p><?php echo $commment['city'] ?>, <?php echo $commment['state'] ?></p>
           </div>
-          <div class="card-action">
+          <div class="card-action card_action_fix">
 
             <form action="index.php" method="post">
               <input type="hidden" name="action" value="change_vote" />
